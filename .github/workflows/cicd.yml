@@ -77,6 +77,9 @@ jobs:
           name: app-jar
           path: target/*.jar
 
+      - name: Install unzip
+        run: sudo apt-get install unzip -y
+
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5.0.0
         env:
